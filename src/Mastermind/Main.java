@@ -1,5 +1,6 @@
 package Mastermind;
 
+import com.jfoenix.controls.JFXAlert;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,7 +23,7 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("View/Home.fxml"));
         primaryStage.setTitle("MasterMind");
-        primaryStage.setScene(new Scene(root, 600, 700));
+        primaryStage.setScene(new Scene(root, 750, 500));
         primaryStage.show();
         primaryStage.setResizable(false);
     }
