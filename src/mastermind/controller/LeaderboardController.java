@@ -47,8 +47,6 @@ public class LeaderboardController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //Update top 10 lists in leaderboard class
-        leaderboard.updateLists();
 
         //Populate top 10 name and time labels
         ArrayList<String> topNames = leaderboard.getTopNames();

@@ -29,7 +29,7 @@ public class Leaderboard {
             String line;
             while ((line = bufferedReader.readLine()) != null){
                 //Split line at tab
-                String nameAndTime[] = line.split("\t");
+                String nameAndTime[] = line.split(",");
 
                 //Add first index of split to names array
                 names.add(nameAndTime[0]);

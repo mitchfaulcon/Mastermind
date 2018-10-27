@@ -7,6 +7,8 @@
     -
     -
 
+- Leaderboard
+    - Update arrays when new score added
 
 - Timer for each game
     - Add to top 10 if needed

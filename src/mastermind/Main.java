@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import mastermind.model.Leaderboard;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -15,6 +16,7 @@ public class Main extends Application {
 
     private static Stage _stage;
     private final String leaderBoardFileName = "Top10Times.txt";
+    private Leaderboard leaderboard = Leaderboard.getInstance();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -39,6 +41,9 @@ public class Main extends Application {
         _stage = primaryStage;
 
         createLeaderboardFile();
+
+        //Update top 10 lists in leaderboard class
+        leaderboard.updateLists();
     }
 
 
