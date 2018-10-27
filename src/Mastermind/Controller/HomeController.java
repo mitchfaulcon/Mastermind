@@ -1,4 +1,4 @@
-package MasterMInd.Controller;
+package Mastermind.Controller;
 
 public class HomeController {
 }

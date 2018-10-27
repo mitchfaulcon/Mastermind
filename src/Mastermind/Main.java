@@ -1,11 +1,9 @@
-package MasterMInd;
+package Mastermind;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -24,8 +22,9 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("View/Home.fxml"));
         primaryStage.setTitle("MasterMind");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 600, 700));
         primaryStage.show();
+        primaryStage.setResizable(false);
     }
 
 
