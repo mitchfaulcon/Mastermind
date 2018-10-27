@@ -2,17 +2,11 @@
 
 - Home Screen
     - Welcome to mastermind
-    - New Game
-    - Leaderboard
-    - Quit
 
 - Game
     -
     -
 
-- Leaderboard
-    - Top 10 times from txt file
-    - Read leaderboard from top10times.txt
 
 - Timer for each game
     - Add to top 10 if needed
@@ -20,12 +14,16 @@
 
 ========== In Progress ==========
 
-- Populate top10times with dummy on startup
-
-
-
 
 ============== Done =============
 
+- Populate top10times with dummy on startup
 
+- Home Screen
+    - Quit
+    - New Game
+    - Leaderboard
 
+- Leaderboard
+    - Top 10 times from txt file
+    - Read leaderboard from top10times.txt
