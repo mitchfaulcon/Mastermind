@@ -1,4 +1,4 @@
-package Mastermind.Controller;
+package mastermind.controller;
 
 public class WinController {
 }

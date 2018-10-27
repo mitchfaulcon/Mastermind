@@ -1,4 +1,4 @@
-package Mastermind.Model;
+package mastermind.model;
 
 public class Timer {
     private static Timer instance = new Timer();
