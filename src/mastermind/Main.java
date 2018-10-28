@@ -92,7 +92,6 @@ public class Main extends Application {
             bufferedWriter.close();
             fileWriter.close();
         }
-
         catch (IOException ex){
             ex.printStackTrace();
         }
