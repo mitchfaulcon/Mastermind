@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastermind.controller.GameController">
+<AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastermind.controller.GameController">
    <children>
-      <Label layoutX="448.0" layoutY="224.0" text="Game" />
+      <JFXButton fx:id="startButton" layoutX="95.0" layoutY="73.0" onAction="#onClick" text="Start" />
+      <JFXButton fx:id="stopButton" layoutX="231.0" layoutY="86.0" onAction="#onClick" text="Stop" />
+      <Label fx:id="timeDisplay" layoutX="468.0" layoutY="77.0" prefHeight="37.0" prefWidth="114.0" text="Label" />
    </children>
 </AnchorPane>

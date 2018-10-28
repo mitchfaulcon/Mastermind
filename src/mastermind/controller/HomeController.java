@@ -35,7 +35,7 @@ public class HomeController {
 
         }
         catch (IOException e){
-
+            e.printStackTrace();
         }
     }
 
@@ -47,7 +47,7 @@ public class HomeController {
 
         }
         catch (IOException e){
-
+            e.printStackTrace();
         }
     }
 

@@ -1,10 +1,7 @@
 package mastermind.model;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Leaderboard {
 
@@ -27,7 +24,7 @@ public class Leaderboard {
 
             String line;
             while ((line = bufferedReader.readLine()) != null){
-                //Split line at tab
+                //Split line at ','
                 String nameAndTime[] = line.split(",");
 
                 //Add first index of split to names array
@@ -38,7 +35,7 @@ public class Leaderboard {
             }
         }
         catch (IOException ex){
-
+            ex.printStackTrace();
         }
     }
 
@@ -96,7 +93,7 @@ public class Leaderboard {
             fileWriter.close();
         }
         catch (IOException ex){
-
+            ex.printStackTrace();
         }
     }
 }

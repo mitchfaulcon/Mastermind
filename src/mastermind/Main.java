@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    private static Stage _stage;
+    private static Stage stage;
     private final String leaderboardFileName = "Top10Times.txt";
     private Leaderboard leaderboard = Leaderboard.getInstance();
 
@@ -38,7 +38,7 @@ public class Main extends Application {
         primaryStage.show();
         primaryStage.setResizable(false);
 
-        _stage = primaryStage;
+        stage = primaryStage;
 
         createLeaderboardFile();
 
@@ -53,8 +53,8 @@ public class Main extends Application {
 
     public static void ChangeScene(Scene scene) {
         //Change to input scene
-        _stage.setScene(scene);
-        _stage.sizeToScene();
+        stage.setScene(scene);
+        stage.sizeToScene();
     }
 
     private void createLeaderboardFile(){
@@ -67,7 +67,7 @@ public class Main extends Application {
                 populateLeaderboard();
             }
         } catch (IOException e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -93,7 +93,7 @@ public class Main extends Application {
             fileWriter.close();
         }
         catch (IOException ex){
-
+            ex.printStackTrace();
         }
     }
 
