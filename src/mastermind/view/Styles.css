@@ -1,0 +1,16 @@
+.leaderboard1 {
+    -fx-background-color: gold;
+    -fx-background-radius: 20;
+}
+.leaderboard2 {
+    -fx-background-color: silver;
+    -fx-background-radius: 20;
+}
+.leaderboard3 {
+    -fx-background-color: #d28847; /*Bronze*/
+    -fx-background-radius: 20;
+}
+.leaderboardElse {
+    -fx-background-color: skyblue;
+    -fx-background-radius: 20;
+}
