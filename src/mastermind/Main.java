@@ -15,7 +15,7 @@ import java.io.IOException;
 public class Main extends Application {
 
     private static Stage _stage;
-    private final String leaderBoardFileName = "Top10Times.txt";
+    private final String leaderboardFileName = "Top10Times.txt";
     private Leaderboard leaderboard = Leaderboard.getInstance();
 
     @Override
@@ -58,7 +58,7 @@ public class Main extends Application {
     }
 
     private void createLeaderboardFile(){
-        File leaderboardFile = new File(leaderBoardFileName);
+        File leaderboardFile = new File(leaderboardFileName);
 
         try {
             //Creates 'Top10Times.txt' file if it does not exist
@@ -75,15 +75,15 @@ public class Main extends Application {
 
         try {
             //Writer to write to leaderboard txt file
-            FileWriter fileWriter = new FileWriter(leaderBoardFileName);
+            FileWriter fileWriter = new FileWriter(leaderboardFileName);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            for (int i=1;i<=10;i++){
-                String entry = "Player " + i + "\t0:" + (i+9) + ":00";
+            for (int player=1;player<=10;player++){
+                String entry = "Player " + player + ",9:59:59";
                 bufferedWriter.write(entry);
 
                 //Add newline char if not last entry
-                if (i<10){
+                if (player!=10){
                     bufferedWriter.write("\n");
                 }
             }
