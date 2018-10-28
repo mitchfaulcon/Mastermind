@@ -21,14 +21,14 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-//        //set event handler for when user presses 'x' button on stage.
-//        primaryStage.setOnCloseRequest(evt -> {
-//            // prevent window from closing
-//            evt.consume();
-//
-//            // execute own shutdown procedure
-//            shutdown();
-//        });
+        //set event handler for when user presses 'x' button on stage.
+        primaryStage.setOnCloseRequest(evt -> {
+            // prevent window from closing
+            evt.consume();
+
+            // execute own shutdown procedure
+            shutdown();
+        });
 
 
         //Change to home screen
@@ -97,12 +97,12 @@ public class Main extends Application {
         }
     }
 
-    //    private void shutdown(){
+        private void shutdown(){
 //        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to quit MasterMind?", ButtonType.YES, ButtonType.NO);
 //        if (alert.showAndWait().orElse(ButtonType.NO) == ButtonType.YES) {
-//            //Quit
-//            System.exit(1);
+            //Quit
+            System.exit(1);
 //        }
-//    }
+    }
 }
 
