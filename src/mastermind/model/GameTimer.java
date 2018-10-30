@@ -47,7 +47,9 @@ public class GameTimer {
     }
 
     public void stopTimer() {
+        //Stop timing and reset clock
         timing = false;
+        sspTime.set("00:00:00");
     }
 
     private void updateTime() {

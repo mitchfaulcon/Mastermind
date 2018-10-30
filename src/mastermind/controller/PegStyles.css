@@ -1,0 +1,64 @@
+.RedPeg {
+    -fx-background-color: red;
+    -fx-border-color: black;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-insets: 1;
+}
+.BluePeg {
+    -fx-background-color: #2ea2cc;
+    -fx-border-color: black;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-insets: 1;
+}
+.GreenPeg {
+    -fx-background-color: #4ad253;
+    -fx-border-color: black;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-insets: 1;
+}
+.PurplePeg {
+    -fx-background-color: #8c38cc;
+    -fx-border-color: black;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-insets: 1;
+}
+.OrangePeg {
+    -fx-background-color: orange;
+    -fx-border-color: black;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-insets: 1;
+}
+.YellowPeg {
+    -fx-background-color: yellow;
+    -fx-border-color: black;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-insets: 1;
+}
+.BlackPeg {
+     -fx-background-color: black;
+     -fx-border-color: black;
+     -fx-background-radius: 20;
+     -fx-border-radius: 20;
+     -fx-border-width: 2;
+     -fx-background-insets: 1;
+}
+.WhitePeg {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-insets: 1;
+}

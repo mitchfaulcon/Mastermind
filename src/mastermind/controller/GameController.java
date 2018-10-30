@@ -22,12 +22,23 @@ import java.util.ResourceBundle;
 public class GameController implements Initializable{
 
     @FXML private Label timeDisplay;
-    @FXML private JFXButton startButton;
-    @FXML private JFXButton stopButton;
     @FXML private Button homeButton;
+
+    //Buttons for changing selected colour
+    @FXML private Button redSelect;
+    @FXML private Button greenSelect;
+    @FXML private Button blueSelect;
+    @FXML private Button orangeSelect;
+    @FXML private Button purpleSelect;
+    @FXML private Button yellowSelect;
 
     private GameTimer gameTimer = GameTimer.getInstance();
     private GameLogic gameLogic;
+
+    //Colour style of currently selected peg
+    private String currentPegColourStyle;
+    //Display for currently selected colour
+    @FXML private Button currentColour;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -43,17 +54,38 @@ public class GameController implements Initializable{
             Platform.runLater(() -> timeDisplay.setText(gameTimer.getSspTime().get()));
 
         });
+
+        //Start the timer from 0 seconds
+        gameTimer.startTimer(0);
+
+        //Set currentSelected peg display to be white
+        currentPegColourStyle = "WhitePeg";
+        updateCurrentPeg();
     }
 
     @FXML private void onClick(ActionEvent event){
-        if (event.getSource().equals(startButton)){
-            gameTimer.startTimer(0);
-        } else if (event.getSource().equals(stopButton)){
-            gameTimer.stopTimer();
-        } else if (event.getSource().equals(homeButton)){
+        if (event.getSource().equals(homeButton)){
             //Stop the timer before changing to main menu
             gameTimer.stopTimer();
             changeToMenu();
+        } else if (event.getSource().equals(redSelect)){
+            currentPegColourStyle = "RedPeg";
+            updateCurrentPeg();
+        } else if (event.getSource().equals(greenSelect)){
+            currentPegColourStyle = "GreenPeg";
+            updateCurrentPeg();
+        } else if (event.getSource().equals(blueSelect)){
+            currentPegColourStyle = "BluePeg";
+            updateCurrentPeg();
+        } else if (event.getSource().equals(orangeSelect)){
+            currentPegColourStyle = "OrangePeg";
+            updateCurrentPeg();
+        } else if (event.getSource().equals(purpleSelect)){
+            currentPegColourStyle = "PurplePeg";
+            updateCurrentPeg();
+        } else if (event.getSource().equals(yellowSelect)) {
+            currentPegColourStyle = "YellowPeg";
+            updateCurrentPeg();
         }
     }
 
@@ -68,5 +100,10 @@ public class GameController implements Initializable{
         catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    private void updateCurrentPeg(){
+        currentColour.getStyleClass().clear();
+        currentColour.getStyleClass().add(currentPegColourStyle);
     }
 }
