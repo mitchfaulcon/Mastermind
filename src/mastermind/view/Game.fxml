@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -9,5 +10,6 @@
       <JFXButton fx:id="startButton" layoutX="95.0" layoutY="73.0" onAction="#onClick" text="Start" />
       <JFXButton fx:id="stopButton" layoutX="231.0" layoutY="86.0" onAction="#onClick" text="Stop" />
       <Label fx:id="timeDisplay" layoutX="468.0" layoutY="77.0" prefHeight="37.0" prefWidth="114.0" text="Label" />
+      <Button fx:id="homeButton" layoutX="104.0" layoutY="336.0" mnemonicParsing="false" onAction="#onClick" text="Home" />
    </children>
 </AnchorPane>
