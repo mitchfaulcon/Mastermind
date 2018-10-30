@@ -53,7 +53,7 @@
       <Button fx:id="orangeSelect" layoutX="126.0" layoutY="455.0" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="OrangePeg" />
       <Button fx:id="purpleSelect" layoutX="162.0" layoutY="455.0" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PurplePeg" />
       <Button fx:id="enterButton" layoutX="662.0" layoutY="456.0" mnemonicParsing="false" onAction="#onClick" text="Enter Guess" />
-      <GridPane layoutX="300.0" layoutY="90.0" prefHeight="359.0" prefWidth="242.0">
+      <GridPane layoutX="303.0" layoutY="82.0" prefHeight="406.0" prefWidth="199.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -62,10 +62,10 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -77,14 +77,14 @@
         </rowConstraints>
          <children>
             <GridPane GridPane.columnIndex="4">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
             </GridPane>
             <GridPane GridPane.columnIndex="4" GridPane.rowIndex="1">
                <columnConstraints>
@@ -105,21 +105,11 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
-            </GridPane>
-            <GridPane GridPane.columnIndex="4" GridPane.rowIndex="3">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
                <children>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="WhitePeg" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="BlackPeg" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="BlackPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" styleClass="WhitePeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="WhitePeg" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="BlackPeg" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="BlackPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="WhitePeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
             <GridPane GridPane.columnIndex="4" GridPane.rowIndex="4">
@@ -202,6 +192,54 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
             </GridPane>
+            <Button fx:id="gamePeg1a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg1b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg1c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg1d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg2a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg2b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg2c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg2d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg3a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg3b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg3c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg3d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg4a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg4b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg4c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg4d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg5a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg5b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg5c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg5d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg6a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg6b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg6c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg6d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg7a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg7b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg7c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg7d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg8a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg8b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg8c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg8d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg9a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg9b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg9c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg9d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg10a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg10b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg10c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg10d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg11a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg11b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg11c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg11d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg12a" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg12b" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg12c" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="gamePeg12d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
    </children>

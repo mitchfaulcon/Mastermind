@@ -61,3 +61,11 @@
     -fx-background-color:
         radial-gradient(center 50% 50%, radius 50%, white 30%, grey 100%);
 }
+.PlaceholderPeg {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+    -fx-background-insets: 1;
+}
