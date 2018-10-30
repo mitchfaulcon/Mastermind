@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class GameLogic {
 
-    private MainPeg[] winningCombo = new MainPeg[4];
+    private CodePeg[] winningCombo = new CodePeg[4];
     private Random random = new Random();
 
-    private enum MainPeg {
+    private enum CodePeg {
         BLUE, RED, GREEN, YELLOW, PURPLE, ORANGE;
     }
-    private enum FeedbackPeg {
+    private enum KeyPeg {
         Black, White;
     }
 
@@ -21,15 +21,16 @@ public class GameLogic {
         //Pick 4 pegs for winning combination
         for (int i=0;i<4;i++){
             winningCombo[i] = getRandomPeg();
+            System.out.println(winningCombo[i]);
         }
     }
 
-    private MainPeg getRandomPeg(){
+    private CodePeg getRandomPeg(){
 
         //Get random index in MainPeg enum
-        int randIndex = random.nextInt(MainPeg.class.getEnumConstants().length);
+        int randIndex = random.nextInt(CodePeg.class.getEnumConstants().length);
 
         //Return value in random index of enum
-        return MainPeg.class.getEnumConstants()[randIndex];
+        return CodePeg.class.getEnumConstants()[randIndex];
     }
 }

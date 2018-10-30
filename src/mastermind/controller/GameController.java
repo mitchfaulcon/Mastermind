@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 public class GameController implements Initializable{
 
     @FXML private Label timeDisplay;
-    @FXML private Button homeButton;
+    @FXML private Button backButton;
 
     //Buttons for changing selected colour
     @FXML private Button redSelect;
@@ -32,7 +32,7 @@ public class GameController implements Initializable{
     @FXML private Button purpleSelect;
     @FXML private Button yellowSelect;
 
-    private GameTimer gameTimer = GameTimer.getInstance();
+    private GameTimer gameTimer;
     private GameLogic gameLogic;
 
     //Colour style of currently selected peg
@@ -42,6 +42,7 @@ public class GameController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        gameTimer = new GameTimer();
         gameLogic = new GameLogic();
         gameLogic.chooseWinning();
         //Set initial timer label
@@ -64,7 +65,7 @@ public class GameController implements Initializable{
     }
 
     @FXML private void onClick(ActionEvent event){
-        if (event.getSource().equals(homeButton)){
+        if (event.getSource().equals(backButton)){
             //Stop the timer before changing to main menu
             gameTimer.stopTimer();
             changeToMenu();

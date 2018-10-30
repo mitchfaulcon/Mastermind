@@ -6,7 +6,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class GameTimer {
-    private static GameTimer instance = new GameTimer();
 
     //Time variables
     private SimpleStringProperty sspTime = new SimpleStringProperty("00:00:00");
@@ -17,11 +16,7 @@ public class GameTimer {
     private TimerTask tt;
     private boolean timing = false;
 
-    public static GameTimer getInstance() {
-        return instance;
-    }
-
-    private GameTimer() {
+    public GameTimer() {
     }
 
     public void startTimer(final long time) {
@@ -47,9 +42,7 @@ public class GameTimer {
     }
 
     public void stopTimer() {
-        //Stop timing and reset clock
         timing = false;
-        sspTime.set("00:00:00");
     }
 
     private void updateTime() {

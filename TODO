@@ -4,8 +4,8 @@
     - Welcome to mastermind
 
 - Game
-    -
-    -
+    - confirm turn button == 'Enter' key
+    - What happens when they lose??
 
 - Leaderboard
     - Update arrays when new score added
