@@ -21,7 +21,6 @@ public class GameLogic {
         //Pick 4 pegs for winning combination
         for (int i=0;i<4;i++){
             winningCombo[i] = getRandomPeg();
-            System.out.println(winningCombo[i]);
         }
     }
 

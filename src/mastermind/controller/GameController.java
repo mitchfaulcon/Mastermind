@@ -32,8 +32,8 @@ public class GameController implements Initializable{
     @FXML private Button purpleSelect;
     @FXML private Button yellowSelect;
 
-    private GameTimer gameTimer;
-    private GameLogic gameLogic;
+    private GameTimer gameTimer = new GameTimer();
+    private GameLogic gameLogic = new GameLogic();
 
     //Colour style of currently selected peg
     private String currentPegColourStyle;
@@ -42,18 +42,17 @@ public class GameController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        gameTimer = new GameTimer();
-        gameLogic = new GameLogic();
+
+        //Decide winning combination of pegs
         gameLogic.chooseWinning();
+
         //Set initial timer label
         timeDisplay.setText(gameTimer.getSspTime().get());
 
         //Listener for when ssp time changes in gameTimer
         gameTimer.getSspTime().addListener(observable -> {
-
             //Update label in application thread
             Platform.runLater(() -> timeDisplay.setText(gameTimer.getSspTime().get()));
-
         });
 
         //Start the timer from 0 seconds

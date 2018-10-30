@@ -1,5 +1,6 @@
 .RedPeg {
-    -fx-background-color: red;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 50%, red 30%, #9c0000 100%);
     -fx-border-color: black;
     -fx-background-radius: 20;
     -fx-border-radius: 20;
@@ -7,7 +8,8 @@
     -fx-background-insets: 1;
 }
 .BluePeg {
-    -fx-background-color: #2ea2cc;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 50%, #2ea2cc 30%, #1f7089 100%);
     -fx-border-color: black;
     -fx-background-radius: 20;
     -fx-border-radius: 20;
@@ -15,7 +17,8 @@
     -fx-background-insets: 1;
 }
 .GreenPeg {
-    -fx-background-color: #4ad253;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 50%, #4ad253 30%, #349639 100%);
     -fx-border-color: black;
     -fx-background-radius: 20;
     -fx-border-radius: 20;
@@ -23,7 +26,8 @@
     -fx-background-insets: 1;
 }
 .PurplePeg {
-    -fx-background-color: #8c38cc;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 50%, #8c38cc 30%, #592481 100%);
     -fx-border-color: black;
     -fx-background-radius: 20;
     -fx-border-radius: 20;
@@ -31,7 +35,8 @@
     -fx-background-insets: 1;
 }
 .OrangePeg {
-    -fx-background-color: orange;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 50%, orange 30%, #945d00 100%);
     -fx-border-color: black;
     -fx-background-radius: 20;
     -fx-border-radius: 20;
@@ -39,7 +44,8 @@
     -fx-background-insets: 1;
 }
 .YellowPeg {
-    -fx-background-color: yellow;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 50%, yellow 30%, #afaf00 100%);
     -fx-border-color: black;
     -fx-background-radius: 20;
     -fx-border-radius: 20;
@@ -47,18 +53,11 @@
     -fx-background-insets: 1;
 }
 .BlackPeg {
-     -fx-background-color: black;
-     -fx-border-color: black;
      -fx-background-radius: 20;
-     -fx-border-radius: 20;
-     -fx-border-width: 2;
-     -fx-background-insets: 1;
+     -fx-background-color: black;
 }
 .WhitePeg {
-    -fx-background-color: white;
-    -fx-border-color: black;
     -fx-background-radius: 20;
-    -fx-border-radius: 20;
-    -fx-border-width: 2;
-    -fx-background-insets: 1;
+    -fx-background-color:
+        radial-gradient(center 50% 50%, radius 50%, white 30%, grey 100%);
 }
