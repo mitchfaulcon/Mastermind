@@ -1,6 +1,5 @@
 package mastermind.controller;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -115,6 +114,7 @@ public class GameController implements Initializable{
     @FXML private GridPane row12;
     private ArrayList<GridPane> rows = new ArrayList<>();
 
+    //To control logic & timing for game
     private GameTimer gameTimer = new GameTimer();
     private GameLogic gameLogic = new GameLogic();
 
@@ -195,6 +195,9 @@ public class GameController implements Initializable{
             currentRow++;
             //Change grey highlight
             updateRow();
+
+            //Reset current guess to be blank
+            gameLogic.resetCurrentGuess();
             //TODO enter guess to gameLogic and get black & white peg count back
         } else if (clicked.equals(gamePeg1a)||clicked.equals(gamePeg1b)||clicked.equals(gamePeg1c)||clicked.equals(gamePeg1d)){
             //Button from row 1 was clicked
@@ -202,6 +205,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 1
             if (currentRow == 1){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg2a)||clicked.equals(gamePeg2b)||clicked.equals(gamePeg2c)||clicked.equals(gamePeg2d)){
             //Button from row 2 was clicked
@@ -209,6 +213,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 2
             if (currentRow == 2){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg3a)||clicked.equals(gamePeg3b)||clicked.equals(gamePeg3c)||clicked.equals(gamePeg3d)){
             //Button from row 3 was clicked
@@ -216,6 +221,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 3
             if (currentRow == 3){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg4a)||clicked.equals(gamePeg4b)||clicked.equals(gamePeg4c)||clicked.equals(gamePeg4d)){
             //Button from row 4 was clicked
@@ -223,6 +229,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 4
             if (currentRow == 4){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg5a)||clicked.equals(gamePeg5b)||clicked.equals(gamePeg5c)||clicked.equals(gamePeg5d)){
             //Button from row 5 was clicked
@@ -230,6 +237,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 5
             if (currentRow == 5){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg6a)||clicked.equals(gamePeg6b)||clicked.equals(gamePeg6c)||clicked.equals(gamePeg6d)){
             //Button from row 6 was clicked
@@ -237,6 +245,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 6
             if (currentRow == 6){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg7a)||clicked.equals(gamePeg7b)||clicked.equals(gamePeg7c)||clicked.equals(gamePeg7d)){
             //Button from row 7 was clicked
@@ -244,6 +253,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 7
             if (currentRow == 7){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg8a)||clicked.equals(gamePeg8b)||clicked.equals(gamePeg8c)||clicked.equals(gamePeg8d)){
             //Button from row 8 was clicked
@@ -251,6 +261,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 8
             if (currentRow == 8){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg9a)||clicked.equals(gamePeg9b)||clicked.equals(gamePeg9c)||clicked.equals(gamePeg9d)){
             //Button from row 9 was clicked
@@ -258,6 +269,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 9
             if (currentRow == 9){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg10a)||clicked.equals(gamePeg10b)||clicked.equals(gamePeg10c)||clicked.equals(gamePeg10d)){
             //Button from row 10 was clicked
@@ -265,6 +277,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 10
             if (currentRow == 10){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg11a)||clicked.equals(gamePeg11b)||clicked.equals(gamePeg11c)||clicked.equals(gamePeg11d)){
             //Button from row 11 was clicked
@@ -272,6 +285,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 11
             if (currentRow == 11){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         } else if (clicked.equals(gamePeg12a)||clicked.equals(gamePeg12b)||clicked.equals(gamePeg12c)||clicked.equals(gamePeg12d)){
             //Button from row 12 was clicked
@@ -279,6 +293,7 @@ public class GameController implements Initializable{
             //Update peg if current guessing row is 12
             if (currentRow == 12){
                 updatePeg(clicked);
+                gameLogic.updateGuess(clicked);
             }
         }
     }

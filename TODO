@@ -7,7 +7,7 @@
     - confirm turn button == 'Enter' key
     - What happens when they lose??
     - Only let enter work when all guesses entered
-    - Highlight for current row?
+    - 123456 == choose different colour peg
 
 - Leaderboard
     - Update arrays when new score added
@@ -31,3 +31,6 @@
 - Leaderboard
     - Top 10 times from txt file
     - Read leaderboard from top10times.txt
+
+- Game
+    - Highlight for current row
