@@ -6,6 +6,8 @@
 - Game
     - confirm turn button == 'Enter' key
     - What happens when they lose??
+    - Only let enter work when all guesses entered
+    - Highlight for current row?
 
 - Leaderboard
     - Update arrays when new score added

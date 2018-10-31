@@ -69,3 +69,8 @@
     -fx-border-width: 2;
     -fx-background-insets: 1;
 }
+
+.CurrentRow {
+    -fx-background-color: lightgrey;
+    -fx-background-radius: 20;
+}

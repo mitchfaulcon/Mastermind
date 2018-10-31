@@ -10,12 +10,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import mastermind.Main;
 import mastermind.model.GameLogic;
 import mastermind.model.GameTimer;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -98,6 +100,21 @@ public class GameController implements Initializable{
     @FXML private Button gamePeg12c;
     @FXML private Button gamePeg12d;
 
+    //GridPanes for each row
+    @FXML private GridPane row1;
+    @FXML private GridPane row2;
+    @FXML private GridPane row3;
+    @FXML private GridPane row4;
+    @FXML private GridPane row5;
+    @FXML private GridPane row6;
+    @FXML private GridPane row7;
+    @FXML private GridPane row8;
+    @FXML private GridPane row9;
+    @FXML private GridPane row10;
+    @FXML private GridPane row11;
+    @FXML private GridPane row12;
+    private ArrayList<GridPane> rows = new ArrayList<>();
+
     private GameTimer gameTimer = new GameTimer();
     private GameLogic gameLogic = new GameLogic();
 
@@ -110,6 +127,20 @@ public class GameController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        //Add GridPaneRows to ArrayList
+        rows.add(row1);
+        rows.add(row2);
+        rows.add(row3);
+        rows.add(row4);
+        rows.add(row5);
+        rows.add(row6);
+        rows.add(row7);
+        rows.add(row8);
+        rows.add(row9);
+        rows.add(row10);
+        rows.add(row11);
+        rows.add(row12);
 
         //Decide winning combination of pegs
         gameLogic.chooseWinning();
@@ -129,6 +160,9 @@ public class GameController implements Initializable{
         //Set currentSelected peg display to be white
         currentPegColourStyle = "PlaceholderPeg";
         updatePeg(currentColour);
+
+        //Update grey highlight of current row
+        updateRow();
     }
 
     @FXML private void onClick(ActionEvent event){
@@ -156,7 +190,11 @@ public class GameController implements Initializable{
             currentPegColourStyle = "YellowPeg";
             updatePeg(currentColour);
         } else if (clicked.equals(enterButton)){
+            //TODO check if all pegs are coloured first
+            //Increase row count
             currentRow++;
+            //Change grey highlight
+            updateRow();
             //TODO enter guess to gameLogic and get black & white peg count back
         } else if (clicked.equals(gamePeg1a)||clicked.equals(gamePeg1b)||clicked.equals(gamePeg1c)||clicked.equals(gamePeg1d)){
             //Button from row 1 was clicked
@@ -262,5 +300,21 @@ public class GameController implements Initializable{
     private void updatePeg(Button button){
         button.getStyleClass().clear();
         button.getStyleClass().add(currentPegColourStyle);
+    }
+
+    private void updateRow(){
+
+        int index = currentRow - 1;
+
+        if (currentRow > 1 && currentRow <= 13){
+            //Clear grey highlight of previous row
+            rows.get(index - 1).getStyleClass().clear();
+        }
+        if (currentRow <= 12){
+            //Change current row to be a grey highlight
+            rows.get(index).getStyleClass().clear();
+            rows.get(index).getStyleClass().add("CurrentRow");
+        }
+
     }
 }
