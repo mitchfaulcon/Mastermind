@@ -44,7 +44,6 @@ public class GameLogic {
     public void resetCurrentGuess(){
         //Change all four current guess pegs to be 'NONE'
         for (int i=0;i<4;i++){
-            System.out.println(currentGuess[i]);
             currentGuess[i] = CodePeg.NONE;
         }
     }
@@ -90,5 +89,18 @@ public class GameLogic {
 
         //Return none if no colour selected
         return CodePeg.NONE;
+    }
+
+    public boolean legalGuess(){
+
+        //Loop through current guess array
+        for (CodePeg peg : currentGuess) {
+            if (peg.equals(CodePeg.NONE)) {
+                //Return false if any pegs are not coloured
+                return false;
+            }
+        }
+
+        return true;
     }
 }

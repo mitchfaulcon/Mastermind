@@ -6,7 +6,6 @@
 - Game
     - confirm turn button == 'Enter' key
     - What happens when they lose??
-    - Only let enter work when all guesses entered
     - 123456 == choose different colour peg
 
 - Leaderboard
@@ -34,3 +33,4 @@
 
 - Game
     - Highlight for current row
+    - Only let enter work when all guesses entered

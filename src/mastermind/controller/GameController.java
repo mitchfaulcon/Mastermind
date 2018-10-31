@@ -190,15 +190,24 @@ public class GameController implements Initializable{
             currentPegColourStyle = "YellowPeg";
             updatePeg(currentColour);
         } else if (clicked.equals(enterButton)){
-            //TODO check if all pegs are coloured first
-            //Increase row count
-            currentRow++;
-            //Change grey highlight
-            updateRow();
+            if (gameLogic.legalGuess()) {
+                //All pegs were coloured in
 
-            //Reset current guess to be blank
-            gameLogic.resetCurrentGuess();
-            //TODO enter guess to gameLogic and get black & white peg count back
+                //Increase row count
+                currentRow++;
+                //Change grey highlight
+                updateRow();
+
+                //Reset current guess to be blank
+                gameLogic.resetCurrentGuess();
+
+                //Display the correct black & white pegs depending on guess
+                setFeedbackPegs();
+
+            } else {
+                //Not all pegs were not coloured in
+                //TODO warning if illegal guess
+            }
         } else if (clicked.equals(gamePeg1a)||clicked.equals(gamePeg1b)||clicked.equals(gamePeg1c)||clicked.equals(gamePeg1d)){
             //Button from row 1 was clicked
 
@@ -331,5 +340,9 @@ public class GameController implements Initializable{
             rows.get(index).getStyleClass().add("CurrentRow");
         }
 
+    }
+
+    private void setFeedbackPegs(){
+        //TODO enter guess to gameLogic and get black & white peg count back
     }
 }
