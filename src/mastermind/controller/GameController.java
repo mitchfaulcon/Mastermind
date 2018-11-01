@@ -258,6 +258,12 @@ public class GameController implements Initializable{
     @FXML private Circle white12c;
     @FXML private Circle white12d;
     private ArrayList<Circle> row12White = new ArrayList<>();
+    
+    //ArrayList to hold black ArrayLists
+    ArrayList<ArrayList<Circle>> allBlack = new ArrayList<>();
+    
+    //ArrayList to hole white ArrayLists
+    ArrayList<ArrayList<Circle>> allWhite = new ArrayList<>();
 
     //To control logic & timing for game
     private GameTimer gameTimer = new GameTimer();
@@ -286,6 +292,11 @@ public class GameController implements Initializable{
         row10Black.add(black10a);row10Black.add(black10b);row10Black.add(black10c);row10Black.add(black10d);
         row11Black.add(black11a);row11Black.add(black11b);row11Black.add(black11c);row11Black.add(black11d);
         row12Black.add(black12a);row12Black.add(black12b);row12Black.add(black12c);row12Black.add(black12d);
+        
+        //Add all black rows to one ArrayList
+        allBlack.add(row1Black);allBlack.add(row2Black);allBlack.add(row3Black);allBlack.add(row4Black);
+        allBlack.add(row5Black);allBlack.add(row6Black);allBlack.add(row7Black);allBlack.add(row8Black);
+        allBlack.add(row9Black);allBlack.add(row10Black);allBlack.add(row11Black);allBlack.add(row12Black);
 
         //Add white display circles to ArrayLists
         row1White.add(white1a);row1White.add(white1b);row1White.add(white1c);row1White.add(white1d);
@@ -300,6 +311,11 @@ public class GameController implements Initializable{
         row10White.add(white10a);row10White.add(white10b);row10White.add(white10c);row10White.add(white10d);
         row11White.add(white11a);row11White.add(white11b);row11White.add(white11c);row11White.add(white11d);
         row12White.add(white12a);row12White.add(white12b);row12White.add(white12c);row12White.add(white12d);
+
+        //Add all white rows to one ArrayList
+        allWhite.add(row1White);allWhite.add(row2White);allWhite.add(row3White);allWhite.add(row4White);
+        allWhite.add(row5White);allWhite.add(row6White);allWhite.add(row7White);allWhite.add(row8White);
+        allWhite.add(row9White);allWhite.add(row10White);allWhite.add(row11White);allWhite.add(row12White);
 
         //Add GridPaneRows to ArrayList
         rows.add(row1);
@@ -519,9 +535,24 @@ public class GameController implements Initializable{
         //Get the number of black and white pegs that need to be displayed
         int[] blackWhiteCount = gameLogic.getFeedback();
 
-        System.out.println("Right colour, right position:" + blackWhiteCount[0]);
-        System.out.println("Right colour, wrong position:" + blackWhiteCount[1]);
-        //TODO display correct buttons
-        //TODO add buttons to FXML
+        //Count to keep track of total pegs displayed
+        int totalPegs = 0;
+
+        for (int blackPeg=0;blackPeg<blackWhiteCount[0];blackPeg++){
+
+            //Set next black peg to be visible
+            allBlack.get(currentRow-1).get(totalPegs).setVisible(true);
+
+            //Increase count for pegs visible
+            totalPegs++;
+        }
+        for (int whitePeg=0;whitePeg<blackWhiteCount[1];whitePeg++){
+
+            //Set next white peg to be visible
+            allWhite.get(currentRow-1).get(totalPegs).setVisible(true);
+
+            //Increase count for pegs visible
+            totalPegs++;
+        }
     }
 }
