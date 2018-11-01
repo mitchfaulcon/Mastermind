@@ -1050,5 +1050,10 @@
             </GridPane>
          </children>
       </GridPane>
+      <Label fx:id="warningLabel" layoutX="525.0" layoutY="397.0" prefHeight="48.0" prefWidth="207.0" text="Please make sure all pegs are coloured in before entering guess" textAlignment="CENTER" textFill="RED" visible="false" wrapText="true">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -23,7 +23,11 @@ import java.util.ResourceBundle;
 
 public class GameController implements Initializable{
 
+    //Label for clock timer
     @FXML private Label timeDisplay;
+
+    //Label for 'not all pegs coloured' warning
+    @FXML private Label warningLabel;
 
     //Return to menu button
     @FXML private Button backButton;
@@ -359,6 +363,10 @@ public class GameController implements Initializable{
     }
 
     @FXML private void onClick(ActionEvent event){
+
+        //Hide warning label when any button clicked
+        warningLabel.setVisible(false);
+
         Button clicked = (Button)event.getSource();
         if (clicked.equals(backButton)){
             //Stop the timer before changing to main menu
@@ -404,7 +412,9 @@ public class GameController implements Initializable{
 
             } else {
                 //Not all pegs were coloured in
-                //TODO warning if illegal guess
+
+                //Show warning
+                warningLabel.setVisible(true);
             }
         } else if (clicked.equals(gamePeg1a)||clicked.equals(gamePeg1b)||clicked.equals(gamePeg1c)||clicked.equals(gamePeg1d)){
             //Button from row 1 was clicked
