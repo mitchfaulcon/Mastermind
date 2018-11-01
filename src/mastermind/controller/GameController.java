@@ -258,10 +258,10 @@ public class GameController implements Initializable{
     @FXML private Circle white12c;
     @FXML private Circle white12d;
     private ArrayList<Circle> row12White = new ArrayList<>();
-    
+
     //ArrayList to hold black ArrayLists
     ArrayList<ArrayList<Circle>> allBlack = new ArrayList<>();
-    
+
     //ArrayList to hole white ArrayLists
     ArrayList<ArrayList<Circle>> allWhite = new ArrayList<>();
 
@@ -274,7 +274,11 @@ public class GameController implements Initializable{
     //Display for currently selected colour
     @FXML private Button currentColour;
 
+    //Current guessing row
     private int currentRow = 1;
+
+    //Has game been won or not
+    private boolean gameWon = false;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -292,7 +296,7 @@ public class GameController implements Initializable{
         row10Black.add(black10a);row10Black.add(black10b);row10Black.add(black10c);row10Black.add(black10d);
         row11Black.add(black11a);row11Black.add(black11b);row11Black.add(black11c);row11Black.add(black11d);
         row12Black.add(black12a);row12Black.add(black12b);row12Black.add(black12c);row12Black.add(black12d);
-        
+
         //Add all black rows to one ArrayList
         allBlack.add(row1Black);allBlack.add(row2Black);allBlack.add(row3Black);allBlack.add(row4Black);
         allBlack.add(row5Black);allBlack.add(row6Black);allBlack.add(row7Black);allBlack.add(row8Black);
@@ -389,6 +393,11 @@ public class GameController implements Initializable{
                 currentRow++;
                 //Change grey highlight
                 updateRow();
+
+                if (gameWon){
+                    //Change current guessing row to be out of bounds if game was won
+                    currentRow = 13;
+                }
 
                 //Reset current guess to be blank
                 gameLogic.resetCurrentGuess();
@@ -523,7 +532,8 @@ public class GameController implements Initializable{
             //Clear grey highlight of previous row
             rows.get(index - 1).getStyleClass().clear();
         }
-        if (currentRow <= 12){
+        if (currentRow <= 12 && !gameWon){
+            //Only if game has not been won
             //Change current row to be a grey highlight
             rows.get(index).getStyleClass().clear();
             rows.get(index).getStyleClass().add("CurrentRow");
@@ -553,6 +563,11 @@ public class GameController implements Initializable{
 
             //Increase count for pegs visible
             totalPegs++;
+        }
+
+        //Check if guess was correct
+        if (blackWhiteCount[0]==4){
+            gameWon = true;
         }
     }
 }
