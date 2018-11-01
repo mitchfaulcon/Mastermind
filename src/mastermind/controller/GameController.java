@@ -264,10 +264,10 @@ public class GameController implements Initializable{
     private ArrayList<Circle> row12White = new ArrayList<>();
 
     //ArrayList to hold black ArrayLists
-    ArrayList<ArrayList<Circle>> allBlack = new ArrayList<>();
+    private ArrayList<ArrayList<Circle>> allBlack = new ArrayList<>();
 
     //ArrayList to hole white ArrayLists
-    ArrayList<ArrayList<Circle>> allWhite = new ArrayList<>();
+    private ArrayList<ArrayList<Circle>> allWhite = new ArrayList<>();
 
     //To control logic & timing for game
     private GameTimer gameTimer = new GameTimer();
@@ -326,18 +326,8 @@ public class GameController implements Initializable{
         allWhite.add(row9White);allWhite.add(row10White);allWhite.add(row11White);allWhite.add(row12White);
 
         //Add GridPaneRows to ArrayList
-        rows.add(row1);
-        rows.add(row2);
-        rows.add(row3);
-        rows.add(row4);
-        rows.add(row5);
-        rows.add(row6);
-        rows.add(row7);
-        rows.add(row8);
-        rows.add(row9);
-        rows.add(row10);
-        rows.add(row11);
-        rows.add(row12);
+        rows.add(row1);rows.add(row2);rows.add(row3);rows.add(row4);rows.add(row5);rows.add(row6);
+        rows.add(row7);rows.add(row8);rows.add(row9);rows.add(row10);rows.add(row11);rows.add(row12);
 
         //Decide winning combination of pegs
         gameLogic.chooseWinning();
@@ -405,16 +395,24 @@ public class GameController implements Initializable{
                 if (gameWon){
                     //Change current guessing row to be out of bounds if game was won
                     currentRow = 13;
+
+                    //TODO something when won
+                } else if (currentRow == 13){
+                    //TODO something when lost
+                    System.out.println("lose");
                 }
 
                 //Reset current guess to be blank
                 gameLogic.resetCurrentGuess();
 
+
             } else {
                 //Not all pegs were coloured in
 
-                //Show warning
-                warningLabel.setVisible(true);
+                if (currentRow < 13) {
+                    //Show warning if game is still going
+                    warningLabel.setVisible(true);
+                }
             }
         } else if (clicked.equals(gamePeg1a)||clicked.equals(gamePeg1b)||clicked.equals(gamePeg1c)||clicked.equals(gamePeg1d)){
             //Button from row 1 was clicked
