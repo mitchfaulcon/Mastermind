@@ -7,6 +7,6 @@ public class WinController {
     private Leaderboard leaderboard = Leaderboard.getInstance();
 
     //Enter name
-    //Get time from timer
+    //Get time from timer (or game controller)
     //Call leaderboard.addWinningTime(name,time)
 }

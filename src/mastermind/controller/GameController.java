@@ -193,6 +193,9 @@ public class GameController implements Initializable{
             if (gameLogic.legalGuess()) {
                 //All pegs were coloured in
 
+                //Display the correct black & white pegs depending on guess
+                setFeedbackPegs();
+
                 //Increase row count
                 currentRow++;
                 //Change grey highlight
@@ -201,11 +204,8 @@ public class GameController implements Initializable{
                 //Reset current guess to be blank
                 gameLogic.resetCurrentGuess();
 
-                //Display the correct black & white pegs depending on guess
-                setFeedbackPegs();
-
             } else {
-                //Not all pegs were not coloured in
+                //Not all pegs were coloured in
                 //TODO warning if illegal guess
             }
         } else if (clicked.equals(gamePeg1a)||clicked.equals(gamePeg1b)||clicked.equals(gamePeg1c)||clicked.equals(gamePeg1d)){
@@ -343,6 +343,12 @@ public class GameController implements Initializable{
     }
 
     private void setFeedbackPegs(){
-        //TODO enter guess to gameLogic and get black & white peg count back
+        //Get the number of black and white pegs that need to be displayed
+        int[] blackWhiteCount = gameLogic.getFeedback();
+
+        System.out.println("Right colour, right position:" + blackWhiteCount[0]);
+        System.out.println("Right colour, wrong position:" + blackWhiteCount[1]);
+        //TODO display correct buttons
+        //TODO add buttons to FXML
     }
 }

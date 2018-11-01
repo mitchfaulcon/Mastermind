@@ -15,10 +15,7 @@ public class GameLogic {
     private Random random = new Random();
 
     private enum CodePeg {
-        BLUE, RED, GREEN, YELLOW, PURPLE, ORANGE, NONE;
-    }
-    private enum KeyPeg {
-        Black, White;
+        BLUE, RED, GREEN, YELLOW, PURPLE, ORANGE, NONE
     }
 
     public GameLogic() {
@@ -29,16 +26,35 @@ public class GameLogic {
         //Pick 4 pegs for winning combination
         for (int i=0;i<4;i++){
             winningCombo[i] = getRandomPeg();
+            /**
+             *
+             *
+             *
+             *
+             *
+             *
+             */
+            System.out.println(winningCombo[i]);
         }
     }
 
     private CodePeg getRandomPeg(){
 
-        //Get random index in MainPeg enum
-        int randIndex = random.nextInt(CodePeg.class.getEnumConstants().length);
+        //Random peg colour to be returned
+        CodePeg randomPeg = CodePeg.NONE;
 
-        //Return value in random index of enum
-        return CodePeg.class.getEnumConstants()[randIndex];
+        //Keep choosing random peg until it is not 'NONE'
+        while (randomPeg.equals(CodePeg.NONE)){
+
+            //Get random index in MainPeg enum
+            int randIndex = random.nextInt(CodePeg.class.getEnumConstants().length);
+
+            //Get value in random index of enum
+            randomPeg = CodePeg.class.getEnumConstants()[randIndex];
+
+        }
+
+        return randomPeg;
     }
 
     public void resetCurrentGuess(){
@@ -102,5 +118,57 @@ public class GameLogic {
         }
 
         return true;
+    }
+
+    public int[] getFeedback(){
+
+        //Count for number of black and white feedback pegs
+        //  [0] = black count
+        //  [1] = white count
+        int[] feedbackCount = {0,0};
+
+        //Arrays to keep track of which pegs have had feedback pegs assigned
+        boolean[] guessPegsChecked = {false,false,false,false};
+        boolean[] winningPegsChecked = {false,false,false,false};
+
+        //Compare guess to winning to assign black pegs (correct colour, correct position)
+        for (int index=0;index<4;index++){
+
+            //Check if entered guess matches winning combination
+            if (currentGuess[index].equals(winningCombo[index])){
+
+                //Increase black peg count
+                feedbackCount[0]++;
+
+                //Set guess and winning peg at index to 'checked'
+                guessPegsChecked[index] = true;
+                winningPegsChecked[index] = true;
+            }
+        }
+
+        //Compare guess to winning to assign white pegs (correct colour, incorrect position)
+        for (int guessIndex=0;guessIndex<4;guessIndex++){
+
+            //Only check peg in guess array if it was not a correct guess
+            if (!guessPegsChecked[guessIndex]){
+
+                //Run through winning combination to look for a match in a different position
+                for (int winningIndex=0;winningIndex<4;winningIndex++){
+
+                    //Check if colour matches & peg hasn't had a peg assigned from it
+                    if (currentGuess[guessIndex].equals(winningCombo[winningIndex]) && !winningPegsChecked[winningIndex]){
+
+                        //Increase white peg count
+                        feedbackCount[1]++;
+
+                        //Set guess and winning peg at index to 'checked'
+                        guessPegsChecked[guessIndex] = true;
+                        winningPegsChecked[winningIndex] = true;
+                    }
+                }
+            }
+        }
+
+        return feedbackCount;
     }
 }

@@ -1,4 +1,5 @@
 ============= TO DO =============
+- Make everything pretty
 
 - Home Screen
     - Welcome to mastermind
@@ -12,7 +13,7 @@
     - Update arrays when new score added
 
 - Timer for each game
-    - Add to top 10 if needed
+    - Add to top 10 if needed (Will always add now)
     - Ask for name for board
 
 ========== In Progress ==========
