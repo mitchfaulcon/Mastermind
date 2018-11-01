@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.shape.Circle;
 import mastermind.Main;
 import mastermind.model.GameLogic;
 import mastermind.model.GameTimer;
@@ -114,6 +115,150 @@ public class GameController implements Initializable{
     @FXML private GridPane row12;
     private ArrayList<GridPane> rows = new ArrayList<>();
 
+    //Feedback display circles for row 1
+    @FXML private Circle black1a;
+    @FXML private Circle black1b;
+    @FXML private Circle black1c;
+    @FXML private Circle black1d;
+    private ArrayList<Circle> row1Black = new ArrayList<>();
+    @FXML private Circle white1a;
+    @FXML private Circle white1b;
+    @FXML private Circle white1c;
+    @FXML private Circle white1d;
+    private ArrayList<Circle> row1White = new ArrayList<>();
+
+    //Feedback display circles for row 2
+    @FXML private Circle black2a;
+    @FXML private Circle black2b;
+    @FXML private Circle black2c;
+    @FXML private Circle black2d;
+    private ArrayList<Circle> row2Black = new ArrayList<>();
+    @FXML private Circle white2a;
+    @FXML private Circle white2b;
+    @FXML private Circle white2c;
+    @FXML private Circle white2d;
+    private ArrayList<Circle> row2White = new ArrayList<>();
+
+    //Feedback display circles for row 3
+    @FXML private Circle black3a;
+    @FXML private Circle black3b;
+    @FXML private Circle black3c;
+    @FXML private Circle black3d;
+    private ArrayList<Circle> row3Black = new ArrayList<>();
+    @FXML private Circle white3a;
+    @FXML private Circle white3b;
+    @FXML private Circle white3c;
+    @FXML private Circle white3d;
+    private ArrayList<Circle> row3White = new ArrayList<>();
+
+    //Feedback display circles for row 4
+    @FXML private Circle black4a;
+    @FXML private Circle black4b;
+    @FXML private Circle black4c;
+    @FXML private Circle black4d;
+    private ArrayList<Circle> row4Black = new ArrayList<>();
+    @FXML private Circle white4a;
+    @FXML private Circle white4b;
+    @FXML private Circle white4c;
+    @FXML private Circle white4d;
+    private ArrayList<Circle> row4White = new ArrayList<>();
+
+    //Feedback display circles for row 5
+    @FXML private Circle black5a;
+    @FXML private Circle black5b;
+    @FXML private Circle black5c;
+    @FXML private Circle black5d;
+    private ArrayList<Circle> row5Black = new ArrayList<>();
+    @FXML private Circle white5a;
+    @FXML private Circle white5b;
+    @FXML private Circle white5c;
+    @FXML private Circle white5d;
+    private ArrayList<Circle> row5White = new ArrayList<>();
+
+    //Feedback display circles for row 6
+    @FXML private Circle black6a;
+    @FXML private Circle black6b;
+    @FXML private Circle black6c;
+    @FXML private Circle black6d;
+    private ArrayList<Circle> row6Black = new ArrayList<>();
+    @FXML private Circle white6a;
+    @FXML private Circle white6b;
+    @FXML private Circle white6c;
+    @FXML private Circle white6d;
+    private ArrayList<Circle> row6White = new ArrayList<>();
+
+    //Feedback display circles for row 7
+    @FXML private Circle black7a;
+    @FXML private Circle black7b;
+    @FXML private Circle black7c;
+    @FXML private Circle black7d;
+    private ArrayList<Circle> row7Black = new ArrayList<>();
+    @FXML private Circle white7a;
+    @FXML private Circle white7b;
+    @FXML private Circle white7c;
+    @FXML private Circle white7d;
+    private ArrayList<Circle> row7White = new ArrayList<>();
+
+    //Feedback display circles for row 8
+    @FXML private Circle black8a;
+    @FXML private Circle black8b;
+    @FXML private Circle black8c;
+    @FXML private Circle black8d;
+    private ArrayList<Circle> row8Black = new ArrayList<>();
+    @FXML private Circle white8a;
+    @FXML private Circle white8b;
+    @FXML private Circle white8c;
+    @FXML private Circle white8d;
+    private ArrayList<Circle> row8White = new ArrayList<>();
+
+    //Feedback display circles for row 9
+    @FXML private Circle black9a;
+    @FXML private Circle black9b;
+    @FXML private Circle black9c;
+    @FXML private Circle black9d;
+    private ArrayList<Circle> row9Black = new ArrayList<>();
+    @FXML private Circle white9a;
+    @FXML private Circle white9b;
+    @FXML private Circle white9c;
+    @FXML private Circle white9d;
+    private ArrayList<Circle> row9White = new ArrayList<>();
+
+    //Feedback display circles for row 10
+    @FXML private Circle black10a;
+    @FXML private Circle black10b;
+    @FXML private Circle black10c;
+    @FXML private Circle black10d;
+    private ArrayList<Circle> row10Black = new ArrayList<>();
+    @FXML private Circle white10a;
+    @FXML private Circle white10b;
+    @FXML private Circle white10c;
+    @FXML private Circle white10d;
+    private ArrayList<Circle> row10White = new ArrayList<>();
+
+    //Feedback display circles for row 11
+    @FXML private Circle black11a;
+    @FXML private Circle black11b;
+    @FXML private Circle black11c;
+    @FXML private Circle black11d;
+    private ArrayList<Circle> row11Black = new ArrayList<>();
+    @FXML private Circle white11a;
+    @FXML private Circle white11b;
+    @FXML private Circle white11c;
+    @FXML private Circle white11d;
+    private ArrayList<Circle> row11White = new ArrayList<>();
+
+    //Feedback display circles for row 12
+    @FXML private Circle black12a;
+    @FXML private Circle black12b;
+    @FXML private Circle black12c;
+    @FXML private Circle black12d;
+    private ArrayList<Circle> row12Black = new ArrayList<>();
+    @FXML private Circle white12a;
+    @FXML private Circle white12b;
+    @FXML private Circle white12c;
+    @FXML private Circle white12d;
+    private ArrayList<Circle> row12White = new ArrayList<>();
+
     //To control logic & timing for game
     private GameTimer gameTimer = new GameTimer();
     private GameLogic gameLogic = new GameLogic();
@@ -127,6 +272,34 @@ public class GameController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        //Add black display circles to ArrayLists
+        row1Black.add(black1a);row1Black.add(black1b);row1Black.add(black1c);row1Black.add(black1d);
+        row2Black.add(black2a);row2Black.add(black2b);row2Black.add(black2c);row2Black.add(black2d);
+        row3Black.add(black3a);row3Black.add(black3b);row3Black.add(black3c);row3Black.add(black3d);
+        row4Black.add(black4a);row4Black.add(black4b);row4Black.add(black4c);row4Black.add(black4d);
+        row5Black.add(black5a);row5Black.add(black5b);row5Black.add(black5c);row5Black.add(black5d);
+        row6Black.add(black6a);row6Black.add(black6b);row6Black.add(black6c);row6Black.add(black6d);
+        row7Black.add(black7a);row7Black.add(black7b);row7Black.add(black7c);row7Black.add(black7d);
+        row8Black.add(black8a);row8Black.add(black8b);row8Black.add(black8c);row8Black.add(black8d);
+        row9Black.add(black9a);row9Black.add(black9b);row9Black.add(black9c);row9Black.add(black9d);
+        row10Black.add(black10a);row10Black.add(black10b);row10Black.add(black10c);row10Black.add(black10d);
+        row11Black.add(black11a);row11Black.add(black11b);row11Black.add(black11c);row11Black.add(black11d);
+        row12Black.add(black12a);row12Black.add(black12b);row12Black.add(black12c);row12Black.add(black12d);
+
+        //Add white display circles to ArrayLists
+        row1White.add(white1a);row1White.add(white1b);row1White.add(white1c);row1White.add(white1d);
+        row2White.add(white2a);row2White.add(white2b);row2White.add(white2c);row2White.add(white2d);
+        row3White.add(white3a);row3White.add(white3b);row3White.add(white3c);row3White.add(white3d);
+        row4White.add(white4a);row4White.add(white4b);row4White.add(white4c);row4White.add(white4d);
+        row5White.add(white5a);row5White.add(white5b);row5White.add(white5c);row5White.add(white5d);
+        row6White.add(white6a);row6White.add(white6b);row6White.add(white6c);row6White.add(white6d);
+        row7White.add(white7a);row7White.add(white7b);row7White.add(white7c);row7White.add(white7d);
+        row8White.add(white8a);row8White.add(white8b);row8White.add(white8c);row8White.add(white8d);
+        row9White.add(white9a);row9White.add(white9b);row9White.add(white9c);row9White.add(white9d);
+        row10White.add(white10a);row10White.add(white10b);row10White.add(white10c);row10White.add(white10d);
+        row11White.add(white11a);row11White.add(white11b);row11White.add(white11c);row11White.add(white11d);
+        row12White.add(white12a);row12White.add(white12b);row12White.add(white12c);row12White.add(white12d);
 
         //Add GridPaneRows to ArrayList
         rows.add(row1);

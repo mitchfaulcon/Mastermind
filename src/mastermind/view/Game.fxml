@@ -8,6 +8,9 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="750.0" stylesheets="@../controller/GameStyles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastermind.controller.GameController">
@@ -277,27 +280,7 @@
                   <Button fx:id="gamePeg1d" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PlaceholderPeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
-            <GridPane GridPane.columnIndex="1">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="11">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -307,10 +290,506 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="WhitePeg" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="BlackPeg" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="BlackPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="WhitePeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="black1a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white1a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black1b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white1b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black1c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white1c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black1d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white1d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="black2a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white2a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black2b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white2b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black2c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white2c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black2d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white2d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="black3a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white3a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black3b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white3b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black3c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white3c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black3d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white3d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="black4a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white4a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black4b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white4b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black4c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white4c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black4d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white4d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="black5a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white5a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black5b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white5b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black5c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white5c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black5d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white5d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="black6a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white6a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black6b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white6b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black6c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white6c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black6d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white6d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="black7a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white7a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black7b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white7b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black7c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white7c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black7d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white7d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Circle fx:id="black8a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white8a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black8b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white8b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black8c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white8c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black8d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white8d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
                </children>
             </GridPane>
             <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -322,8 +801,62 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
+               <children>
+                  <Circle fx:id="black9a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white9a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black9b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white9b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black9c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white9c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black9d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white9d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
             </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -332,8 +865,62 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
+               <children>
+                  <Circle fx:id="black10a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white10a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black10b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white10b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black10c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white10c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black10d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white10d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
             </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -342,8 +929,62 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
+               <children>
+                  <Circle fx:id="black11a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white11a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black11b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white11b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black11c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white11c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black11d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white11d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
             </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <GridPane GridPane.columnIndex="1">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -352,56 +993,60 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
-            </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="8">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="9">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="10">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-            </GridPane>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="11">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
+               <children>
+                  <Circle fx:id="black12a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white12a" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black12b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white12b" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black12c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white12c" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Circle fx:id="black12d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Circle fx:id="white12d" radius="5.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <fill>
+                        <RadialGradient centerX="0.5044444613986545" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="0.2976924421653749" />
+                              <Stop color="#a7a1a1" offset="0.9145038167938926" />
+                              <Stop color="#a7a1a1" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+               </children>
             </GridPane>
          </children>
       </GridPane>
