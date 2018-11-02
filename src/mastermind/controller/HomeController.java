@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import mastermind.Main;
 
 import java.io.IOException;
@@ -48,6 +50,14 @@ public class HomeController {
         }
         catch (IOException e){
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void keyReleased(KeyEvent keyEvent) {
+        //Esc shortcut for quitting application
+        if (keyEvent.getCode().equals(KeyCode.ESCAPE)){
+            quitButton.fire();
         }
     }
 

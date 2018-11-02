@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import mastermind.Main;
 import mastermind.model.Leaderboard;
 
@@ -113,6 +115,14 @@ public class LeaderboardController implements Initializable {
         }
         catch (IOException e){
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void keyReleased(KeyEvent keyEvent) {
+        //Esc shortcut for going back to main menu
+        if (keyEvent.getCode().equals(KeyCode.ESCAPE)){
+            backButton.fire();
         }
     }
 }
