@@ -7,8 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
@@ -16,6 +15,7 @@ import javafx.scene.shape.Circle;
 import mastermind.Main;
 import mastermind.model.GameLogic;
 import mastermind.model.GameTimer;
+import mastermind.model.Leaderboard;
 
 import java.io.IOException;
 import java.net.URL;
@@ -398,8 +398,24 @@ public class GameController implements Initializable{
                     //Change current guessing row to be out of bounds if game was won
                     currentRow = 13;
 
-                    System.out.println("win");
-                    //TODO something when won
+                    //Stop the timer
+                    gameTimer.stopTimer();
+
+                    //Show dialog to get user's name
+                    TextInputDialog winningDialogue = new TextInputDialog();
+                    winningDialogue.setTitle("Congratulations! You have won!");
+                    winningDialogue.setHeaderText("Enter your name:");
+                    winningDialogue.setContentText("Name:");
+                    winningDialogue.getDialogPane().setPrefSize(300,200);
+                    winningDialogue.showAndWait().ifPresent(name -> {
+                        //Add the name and time to leaderboard
+                        Leaderboard leaderboard = Leaderboard.getInstance();
+                        leaderboard.addWinningTime(name, gameTimer.getSspTime().get());
+                    });
+
+                    //Change back to main menu
+                    changeToMenu();
+
                 } else if (currentRow == 13){
                     //TODO something when lost
                     System.out.println("lose");

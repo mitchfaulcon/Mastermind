@@ -1,3 +1,6 @@
+Brad Sucks,00:00:08
+testy3,00:00:08
+Brad Still Sucks,00:00:12
 Player 1,9:59:59
 Player 2,9:59:59
 Player 3,9:59:59
@@ -5,6 +8,3 @@ Player 4,9:59:59
 Player 5,9:59:59
 Player 6,9:59:59
 Player 7,9:59:59
-Player 8,9:59:59
-Player 9,9:59:59
-Player 10,9:59:59

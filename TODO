@@ -3,15 +3,12 @@
 
 - Home Screen
     - Welcome to mastermind
-    - Esc keyboard shortcut
 
 - Game
     - What happens when they lose??
-    - And win?
 
 - Leaderboard
     - Update arrays when new score added
-    - Esc keyboard shortcut
 
 - Timer for each game
     - Add to top 10 if needed (Will always add now)
@@ -31,10 +28,12 @@
     - Quit
     - New Game
     - Leaderboard
+    - Esc keyboard shortcut
 
 - Leaderboard
     - Top 10 times from txt file
     - Read leaderboard from top10times.txt
+    - Esc keyboard shortcut
 
 - Game
     - Highlight for current row
