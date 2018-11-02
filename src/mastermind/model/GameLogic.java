@@ -156,7 +156,7 @@ public class GameLogic {
                 for (int winningIndex=0;winningIndex<4;winningIndex++){
 
                     //Check if colour matches & peg hasn't had a peg assigned from it
-                    if (currentGuess[guessIndex].equals(winningCombo[winningIndex]) && !winningPegsChecked[winningIndex]){
+                    if (currentGuess[guessIndex].equals(winningCombo[winningIndex]) && !winningPegsChecked[winningIndex] && !guessPegsChecked[guessIndex]){
 
                         //Increase white peg count
                         feedbackCount[1]++;
