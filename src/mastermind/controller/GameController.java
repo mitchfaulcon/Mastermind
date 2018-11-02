@@ -398,6 +398,7 @@ public class GameController implements Initializable{
                     //Change current guessing row to be out of bounds if game was won
                     currentRow = 13;
 
+                    System.out.println("win");
                     //TODO something when won
                 } else if (currentRow == 13){
                     //TODO something when lost
@@ -513,6 +514,9 @@ public class GameController implements Initializable{
                 gameLogic.updateGuess(clicked);
             }
         }
+
+        //Change enter button to be highlighted
+        enterButton.requestFocus();
     }
 
     private void changeToMenu(){
@@ -596,9 +600,9 @@ public class GameController implements Initializable{
             purpleSelect.fire();
         } else if (keyEvent.getCode().equals(KeyCode.DIGIT6) || keyEvent.getCode().equals(KeyCode.NUMPAD6)){
             yellowSelect.fire();
-
+        }
         //ASDF shortcuts for entering colour guess
-        } else if (keyEvent.getCode().equals(KeyCode.A)){
+        else if (keyEvent.getCode().equals(KeyCode.A)){
             gamePeg1a.fire();gamePeg2a.fire();gamePeg3a.fire();gamePeg4a.fire();gamePeg5a.fire();gamePeg6a.fire();
             gamePeg7a.fire();gamePeg8a.fire();gamePeg9a.fire();gamePeg10a.fire();gamePeg11a.fire();gamePeg12a.fire();
         } else if (keyEvent.getCode().equals(KeyCode.S)){
@@ -610,6 +614,10 @@ public class GameController implements Initializable{
         } else if (keyEvent.getCode().equals(KeyCode.F)){
             gamePeg1d.fire();gamePeg2d.fire();gamePeg3d.fire();gamePeg4d.fire();gamePeg5d.fire();gamePeg6d.fire();
             gamePeg7d.fire();gamePeg8d.fire();gamePeg9d.fire();gamePeg10d.fire();gamePeg11d.fire();gamePeg12d.fire();
+        }
+        //Esc shortcut for going back to main menu
+        else if (keyEvent.getCode().equals(KeyCode.ESCAPE)){
+            backButton.fire();
         }
     }
 }

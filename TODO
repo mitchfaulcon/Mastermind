@@ -3,13 +3,14 @@
 
 - Home Screen
     - Welcome to mastermind
+    - Esc keyboard shortcut
 
 - Game
-    - confirm turn button == 'Enter' key
     - What happens when they lose??
 
 - Leaderboard
     - Update arrays when new score added
+    - Esc keyboard shortcut
 
 - Timer for each game
     - Add to top 10 if needed (Will always add now)
@@ -35,3 +36,4 @@
     - Highlight for current row
     - Only let enter work when all guesses entered
     - 123456 == choose different colour peg
+    - confirm turn button == 'Enter' key
