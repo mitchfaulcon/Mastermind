@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="750.0" stylesheets="@../controller/GameStyles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastermind.controller.GameController">
+<AnchorPane onKeyReleased="#keyReleased" prefHeight="500.0" prefWidth="750.0" stylesheets="@../controller/GameStyles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastermind.controller.GameController">
    <children>
       <GridPane prefHeight="500.0" prefWidth="750.0">
          <columnConstraints>

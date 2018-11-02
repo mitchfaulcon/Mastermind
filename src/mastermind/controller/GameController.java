@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Circle;
 import mastermind.Main;
@@ -576,6 +578,24 @@ public class GameController implements Initializable{
         //Check if guess was correct
         if (blackWhiteCount[0]==4){
             gameWon = true;
+        }
+    }
+
+    @FXML
+    private void keyReleased(KeyEvent keyEvent) {
+        //Numpad shortcuts for changing colour selection
+        if (keyEvent.getCode().equals(KeyCode.DIGIT1) || keyEvent.getCode().equals(KeyCode.NUMPAD1)){
+            redSelect.fire();
+        } else if (keyEvent.getCode().equals(KeyCode.DIGIT2) || keyEvent.getCode().equals(KeyCode.NUMPAD2)){
+            greenSelect.fire();
+        } else if (keyEvent.getCode().equals(KeyCode.DIGIT3) || keyEvent.getCode().equals(KeyCode.NUMPAD3)){
+            blueSelect.fire();
+        } else if (keyEvent.getCode().equals(KeyCode.DIGIT4) || keyEvent.getCode().equals(KeyCode.NUMPAD4)){
+            orangeSelect.fire();
+        } else if (keyEvent.getCode().equals(KeyCode.DIGIT5) || keyEvent.getCode().equals(KeyCode.NUMPAD5)){
+            purpleSelect.fire();
+        } else if (keyEvent.getCode().equals(KeyCode.DIGIT6) || keyEvent.getCode().equals(KeyCode.NUMPAD6)){
+            yellowSelect.fire();
         }
     }
 }
