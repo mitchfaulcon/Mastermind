@@ -28,9 +28,6 @@ public class GameController implements Initializable{
     //Label for clock timer
     @FXML private Label timeDisplay;
 
-    //Label for 'not all pegs coloured' warning
-    @FXML private Label warningLabel;
-
     //Return to menu button
     @FXML private Button backButton;
 
@@ -352,12 +349,12 @@ public class GameController implements Initializable{
 
         //Update grey highlight of current row
         updateRow();
+
+        //Disable enter button initially
+        enterButton.setDisable(true);
     }
 
     @FXML private void onClick(ActionEvent event){
-
-        //Hide warning label when any button clicked
-        warningLabel.setVisible(false);
 
         Button clicked = (Button)event.getSource();
         if (clicked.equals(backButton)){
@@ -383,8 +380,6 @@ public class GameController implements Initializable{
             currentPegColourStyle = "YellowPeg";
             updatePeg(currentColour);
         } else if (clicked.equals(enterButton)){
-            if (gameLogic.legalGuess()) {
-                //All pegs were coloured in
 
                 //Display the correct black & white pegs depending on guess
                 setFeedbackPegs();
@@ -393,6 +388,9 @@ public class GameController implements Initializable{
                 currentRow++;
                 //Change grey highlight
                 updateRow();
+
+                //Disable enter button
+                enterButton.setDisable(true);
 
                 if (gameWon){
                     //Change current guessing row to be out of bounds if game was won
@@ -438,15 +436,6 @@ public class GameController implements Initializable{
                 //Reset current guess to be blank
                 gameLogic.resetCurrentGuess();
 
-
-            } else {
-                //Not all pegs were coloured in
-
-                if (currentRow < 13) {
-                    //Show warning if game is still going
-                    warningLabel.setVisible(true);
-                }
-            }
         } else if (clicked.equals(gamePeg1a)||clicked.equals(gamePeg1b)||clicked.equals(gamePeg1c)||clicked.equals(gamePeg1d)){
             //Button from row 1 was clicked
 
@@ -543,6 +532,13 @@ public class GameController implements Initializable{
                 updatePeg(clicked);
                 gameLogic.updateGuess(clicked);
             }
+        }
+
+        //Only enable enter button if all pegs are filled in
+        if (!gameLogic.legalGuess()){
+            enterButton.setDisable(true);
+        } else {
+            enterButton.setDisable(false);
         }
 
         //Change enter button to be highlighted
