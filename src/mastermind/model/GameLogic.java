@@ -34,7 +34,7 @@ public class GameLogic {
              *
              *
              */
-            System.out.println(winningCombo[i]);
+            //System.out.println(winningCombo[i]);
         }
     }
 

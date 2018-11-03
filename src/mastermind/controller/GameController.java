@@ -417,8 +417,22 @@ public class GameController implements Initializable{
                     changeToMenu();
 
                 } else if (currentRow == 13){
-                    //TODO something when lost
-                    System.out.println("lose");
+
+                    //Alert to check if user wants to try again or go back to menu
+                    Alert losingDialogue = new Alert(Alert.AlertType.NONE,"You lose",ButtonType.YES,ButtonType.NO);
+                    //Set button text
+                    ((Button) losingDialogue.getDialogPane().lookupButton(ButtonType.YES)).setText("New Game");
+                    ((Button) losingDialogue.getDialogPane().lookupButton(ButtonType.NO)).setText("Back to Main Menu");
+                    losingDialogue.setTitle("Better luck next time");
+                    losingDialogue.showAndWait();
+
+                    if (losingDialogue.getResult().equals(ButtonType.YES)){
+                        //Restart game
+                        restartGame();
+                    } else if (losingDialogue.getResult().equals(ButtonType.NO)){
+                        //Change to the main menu
+                        changeToMenu();
+                    }
                 }
 
                 //Reset current guess to be blank
@@ -539,6 +553,19 @@ public class GameController implements Initializable{
         //Change back to main menu
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("mastermind/view/Home.fxml")));
+            Scene menu = new Scene(root,750,500);
+            Main.ChangeScene(menu);
+
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    private void restartGame(){
+        //Change to game scene again
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("mastermind/view/Game.fxml")));
             Scene menu = new Scene(root,750,500);
             Main.ChangeScene(menu);
 

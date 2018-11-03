@@ -7,13 +7,6 @@
 - Game
     - What happens when they lose??
 
-- Leaderboard
-    - Update arrays when new score added
-
-- Timer for each game
-    - Add to top 10 if needed (Will always add now)
-    - Ask for name for board
-
 - Change leaderboard to be score based on time & number of guesses
 
 
@@ -40,3 +33,10 @@
     - Only let enter work when all guesses entered
     - 123456 == choose different colour peg
     - confirm turn button == 'Enter' key
+
+- Leaderboard
+    - Update arrays when new score added
+
+- Timer for each game
+    - Add to top 10 if needed (Will always add now)
+    - Ask for name for board
