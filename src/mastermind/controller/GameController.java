@@ -358,9 +358,17 @@ public class GameController implements Initializable{
 
         Button clicked = (Button)event.getSource();
         if (clicked.equals(backButton)){
-            //Stop the timer before changing to main menu
-            gameTimer.stopTimer();
-            changeToMenu();
+
+            //Alert to make sure user wants to end the game
+            Alert quitConfirmation = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to end the game?",ButtonType.YES,ButtonType.NO);
+            quitConfirmation.showAndWait();
+
+            if (quitConfirmation.getResult().equals(ButtonType.YES)) {
+                //Stop the timer before changing to main menu
+                gameTimer.stopTimer();
+                //Change to menu
+                changeToMenu();
+            }
         } else if (clicked.equals(redSelect)){
             currentPegColourStyle = "RedPeg";
             updatePeg(currentColour);
@@ -551,11 +559,10 @@ public class GameController implements Initializable{
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("mastermind/view/Home.fxml")));
             Scene menu = new Scene(root,750,500);
             Main.ChangeScene(menu);
-
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     private void restartGame(){

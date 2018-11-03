@@ -45,6 +45,10 @@ public class GameTimer {
         timing = false;
     }
 
+    public void resumeTimer() {
+        timing = true;
+    }
+
     private void updateTime() {
         this.time = this.time + 1000;
         String[] split = getHMSTimeFormat();
