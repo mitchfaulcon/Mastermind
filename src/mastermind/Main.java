@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import mastermind.model.Leaderboard;
 
@@ -98,11 +100,11 @@ public class Main extends Application {
     }
 
         private void shutdown(){
-//        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to quit MasterMind?", ButtonType.YES, ButtonType.NO);
-//        if (alert.showAndWait().orElse(ButtonType.NO) == ButtonType.YES) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to quit MasterMind?", ButtonType.YES, ButtonType.NO);
+        if (alert.showAndWait().orElse(ButtonType.NO) == ButtonType.YES) {
             //Quit
             System.exit(1);
-//        }
+        }
     }
 }
 
