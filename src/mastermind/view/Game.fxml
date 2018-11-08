@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane onKeyReleased="#keyReleased" prefHeight="500.0" prefWidth="750.0" stylesheets="@../controller/GameStyles.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastermind.controller.GameController">
+<AnchorPane onKeyReleased="#keyReleased" prefHeight="500.0" prefWidth="750.0" stylesheets="@../controller/GameStyles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mastermind.controller.GameController">
    <children>
       <GridPane prefHeight="500.0" prefWidth="750.0">
          <columnConstraints>
@@ -46,17 +46,7 @@
             </GridPane>
          </children>
       </GridPane>
-      <Button fx:id="currentColour" layoutX="75.0" layoutY="203.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
-      <Label layoutX="48.0" layoutY="263.0" text="Colours:" />
-      <Label layoutX="50.0" layoutY="163.0" text="Current Colour:" />
-      <Button fx:id="blueSelect" layoutX="90.0" layoutY="455.0" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="BluePeg" />
-      <Button fx:id="greenSelect" layoutX="54.0" layoutY="455.0" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="GreenPeg" />
-      <Button fx:id="redSelect" layoutX="18.0" layoutY="455.0" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="RedPeg" />
-      <Button fx:id="yellowSelect" layoutX="198.0" layoutY="455.0" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="YellowPeg" />
-      <Button fx:id="orangeSelect" layoutX="126.0" layoutY="455.0" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="OrangePeg" />
-      <Button fx:id="purpleSelect" layoutX="162.0" layoutY="455.0" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PurplePeg" />
-      <Button fx:id="enterButton" layoutX="662.0" layoutY="456.0" mnemonicParsing="false" onAction="#onClick" text="Enter Guess" />
-      <GridPane layoutX="300.0" layoutY="75.0" prefHeight="406.0" prefWidth="199.0">
+      <GridPane layoutX="400.0" layoutY="75.0" prefHeight="406.0" prefWidth="199.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.4000244140625" minWidth="10.0" prefWidth="163.1999755859375" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="36.000024414062494" />
@@ -1048,6 +1038,96 @@
                   </Circle>
                </children>
             </GridPane>
+         </children>
+      </GridPane>
+      <Label text="Label" />
+      <Button fx:id="currentColour" layoutX="75.0" layoutY="203.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
+      <Label layoutX="48.0" layoutY="263.0" text="Colours:" />
+      <Label layoutX="50.0" layoutY="163.0" text="Current Colour:" />
+      <Button fx:id="enterButton" layoutX="662.0" layoutY="456.0" mnemonicParsing="false" onAction="#onClick" text="Enter Guess" />
+      <GridPane layoutX="20.0" layoutY="414.0" prefHeight="48.0" prefWidth="240.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="19.60001220703125" minHeight="10.0" prefHeight="14.800024414062499" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="33.9999755859375" minHeight="10.0" prefHeight="33.9999755859375" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="redSelect" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="RedPeg" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="greenSelect" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="GreenPeg" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="blueSelect" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="BluePeg" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="orangeSelect" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="OrangePeg" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="purpleSelect" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="PurplePeg" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="yellowSelect" mnemonicParsing="false" onAction="#onClick" prefHeight="30.0" prefWidth="30.0" styleClass="YellowPeg" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="6" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="5" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="4" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="400.0" layoutY="55.0" prefHeight="26.0" prefWidth="163.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="s" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="f" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="d" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="a" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
          </children>
       </GridPane>
    </children>

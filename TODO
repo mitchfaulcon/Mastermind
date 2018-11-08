@@ -5,6 +5,7 @@
     - Welcome to mastermind
 
 - Game
+    - Change layout
 
 
 - Change leaderboard to be score based on time & number of guesses
@@ -35,6 +36,8 @@
     - confirm turn button == 'Enter' key
     - What happens when they lose??
     - Confirmation for quitting
+    - Number labels for colour select
+    - Letter labels for columns
 
 - Leaderboard
     - Update arrays when new score added

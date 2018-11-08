@@ -545,12 +545,14 @@ public class GameController implements Initializable{
         //Only enable enter button if all pegs are filled in
         if (!gameLogic.legalGuess()){
             enterButton.setDisable(true);
+            //Change a button that isn't the back button to be highlighted
+            currentColour.requestFocus();
         } else {
             enterButton.setDisable(false);
+            //Change enter button to be highlighted
+            enterButton.requestFocus();
         }
 
-        //Change enter button to be highlighted
-        enterButton.requestFocus();
     }
 
     private void changeToMenu(){
@@ -609,7 +611,6 @@ public class GameController implements Initializable{
         int totalPegs = 0;
 
         for (int blackPeg=0;blackPeg<blackWhiteCount[0];blackPeg++){
-
             //Set next black peg to be visible
             allBlack.get(currentRow-1).get(totalPegs).setVisible(true);
 
