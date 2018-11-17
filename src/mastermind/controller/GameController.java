@@ -407,16 +407,24 @@ public class GameController implements Initializable{
                     //Stop the timer
                     gameTimer.stopTimer();
 
+                    //Get winning time
+                    String time = gameTimer.getSspTime().get();
+
                     //Show dialog to get user's name
                     TextInputDialog winningDialogue = new TextInputDialog();
+                    //Disable cancel button
+                    winningDialogue.getDialogPane().lookupButton(ButtonType.CANCEL).setVisible(false);
+                    //Change displayed text
                     winningDialogue.setTitle("Congratulations! You have won!");
-                    winningDialogue.setHeaderText("Enter your name:");
-                    winningDialogue.setContentText("Name:");
-                    winningDialogue.getDialogPane().setPrefSize(300,200);
+                    winningDialogue.setHeaderText("Your time was " + time);
+                    winningDialogue.setContentText("Enter name:\n");
+                    //Change size of dialog
+                    winningDialogue.getDialogPane().setPrefSize(280,200);
+                    //Wait until name is entered & ok is clicked
                     winningDialogue.showAndWait().ifPresent(name -> {
                         //Add the name and time to leaderboard
                         Leaderboard leaderboard = Leaderboard.getInstance();
-                        leaderboard.addWinningTime(name, gameTimer.getSspTime().get());
+                        leaderboard.addWinningTime(name, time);
                     });
 
                     //Change back to main menu
