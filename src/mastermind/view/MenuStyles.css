@@ -14,3 +14,11 @@
     -fx-background-color: skyblue;
     -fx-background-radius: 20;
 }
+.welcomeText.label .text {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 60px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+    -fx-stroke: black;
+    -fx-stroke-width: 2px;
+}

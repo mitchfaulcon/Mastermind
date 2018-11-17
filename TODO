@@ -1,12 +1,4 @@
 ============= TO DO =============
-- Make everything pretty
-
-- Home Screen
-    - Welcome to mastermind
-
-- Game
-    - Change layout
-
 
 - Change leaderboard to be score based on time & number of guesses
 
@@ -23,6 +15,7 @@
     - New Game
     - Leaderboard
     - Esc keyboard shortcut
+    - Welcome to mastermind
 
 - Leaderboard
     - Top 10 times from txt file
@@ -38,6 +31,8 @@
     - Confirmation for quitting
     - Number labels for colour select
     - Letter labels for columns
+    - Change layout
+    - get rid of fxml warning
 
 - Leaderboard
     - Update arrays when new score added
